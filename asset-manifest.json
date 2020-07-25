@@ -1,22 +1,23 @@
 {
   "files": {
-    "main.css": "/React-dice/static/css/main.2893133d.chunk.css",
-    "main.js": "/React-dice/static/js/main.d3f60d9e.chunk.js",
-    "main.js.map": "/React-dice/static/js/main.d3f60d9e.chunk.js.map",
-    "runtime-main.js": "/React-dice/static/js/runtime-main.168c5edb.js",
-    "runtime-main.js.map": "/React-dice/static/js/runtime-main.168c5edb.js.map",
-    "static/js/2.763b2280.chunk.js": "/React-dice/static/js/2.763b2280.chunk.js",
-    "static/js/2.763b2280.chunk.js.map": "/React-dice/static/js/2.763b2280.chunk.js.map",
-    "index.html": "/React-dice/index.html",
-    "precache-manifest.d4365df568ed37a7576fc4f384efe685.js": "/React-dice/precache-manifest.d4365df568ed37a7576fc4f384efe685.js",
-    "service-worker.js": "/React-dice/service-worker.js",
-    "static/css/main.2893133d.chunk.css.map": "/React-dice/static/css/main.2893133d.chunk.css.map",
-    "static/js/2.763b2280.chunk.js.LICENSE.txt": "/React-dice/static/js/2.763b2280.chunk.js.LICENSE.txt"
+    "main.css": "/React-cardgame/static/css/main.a57d9fb1.chunk.css",
+    "main.js": "/React-cardgame/static/js/main.61824322.chunk.js",
+    "main.js.map": "/React-cardgame/static/js/main.61824322.chunk.js.map",
+    "runtime-main.js": "/React-cardgame/static/js/runtime-main.9c030181.js",
+    "runtime-main.js.map": "/React-cardgame/static/js/runtime-main.9c030181.js.map",
+    "static/js/2.1bfada5b.chunk.js": "/React-cardgame/static/js/2.1bfada5b.chunk.js",
+    "static/js/2.1bfada5b.chunk.js.map": "/React-cardgame/static/js/2.1bfada5b.chunk.js.map",
+    "index.html": "/React-cardgame/index.html",
+    "precache-manifest.7204c77b1429b8dc63c79927fe816a9f.js": "/React-cardgame/precache-manifest.7204c77b1429b8dc63c79927fe816a9f.js",
+    "service-worker.js": "/React-cardgame/service-worker.js",
+    "static/css/main.a57d9fb1.chunk.css.map": "/React-cardgame/static/css/main.a57d9fb1.chunk.css.map",
+    "static/js/2.1bfada5b.chunk.js.LICENSE.txt": "/React-cardgame/static/js/2.1bfada5b.chunk.js.LICENSE.txt",
+    "static/media/15.jpeg": "/React-cardgame/static/media/15.df787e08.jpeg"
   },
   "entrypoints": [
-    "static/js/runtime-main.168c5edb.js",
-    "static/js/2.763b2280.chunk.js",
-    "static/css/main.2893133d.chunk.css",
-    "static/js/main.d3f60d9e.chunk.js"
+    "static/js/runtime-main.9c030181.js",
+    "static/js/2.1bfada5b.chunk.js",
+    "static/css/main.a57d9fb1.chunk.css",
+    "static/js/main.61824322.chunk.js"
   ]
 }
