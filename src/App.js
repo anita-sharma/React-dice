@@ -1,11 +1,7 @@
 import React,{Component} from 'react';
-import Face1 from "./components/Face1.js";
-import Face2 from "./components/Face2.js";
-import Face3 from "./components/Face3.js";
-import Face4 from "./components/Face4.js";
-import Face5 from "./components/Face5.js";
-import Face6 from "./components/Face6.js";
 import "./App.css";
+import CARDS from "./cards/cards.js"
+
 
 
 class App extends Component
@@ -15,30 +11,101 @@ class App extends Component
     super(props);
    
     this.state={
-    arr:[Face1,Face2,Face3,Face4,Face5,Face6],
-     dice:Face2
+      score:0,
+      over:"",
+      highest:0,
+      cards:CARDS
     };
     
   }
-
-  suffle=()=>{
-    const num=Math.floor(Math.random()*1000)%6;
+  unsetFlag=()=>{
+    const cards=this.state.cards;
+    for(var i=0;i<cards.length;i++)
+    {
+      cards[i].flag=false;
+     
+    }
     this.setState({
-      dice:this.state.arr[num]
+      cards:cards
     });
+
+  }
+checkHighest=(score)=>{
+  if(this.state.highest<score)
+          {
+            this.setState({
+              highest:score
+            });
+          }
+}
+  handleclick=(cname)=>{
+    const cards=this.state.cards;
+    for(var i=0;i<cards.length;i++)
+    {
+      if(cards[i].name===cname)
+      {
+        if(cards[i].flag)
+        {
+          this.setState({
+            over:"game over"
+          });
+          break;
+        }
+        else
+        {
+          cards[i].flag=true;
+          const score=this.state.score+20;
+            this.checkHighest(score);
+          this.setState({
+            score:score
+          });
+          //this.checkHighest();
+          break;
+        }
+      }
+    }
+    if(this.state.over==="game over")
+    {
+      this.unsetFlag();
+    }
+    else{
+
+        for(i=0;i<cards.length;i++)
+        {
+          const j=Math.floor(Math.random()*cards.length);
+          const temp=cards[i];
+          cards[i]=cards[j];
+          cards[j]=temp;
+        }
+        this.setState({
+        cards:cards
+    });
+    }
+  }
+  restart=()=>{
+    this.setState({
+      over:"",
+      score:0
+    });
+    this.unsetFlag();
   }
 
   render()
   {
-      const Face=this.state.dice;
-   return(
+    const cards=this.state.cards.map(card=>
+      <div className="card" onClick={()=>this.handleclick(card.name)}>
+        <img  src={card.photo}/>
+      </div>);
+        return(
       <>
-      <center className="mt-5">
-      <h1>React Dice</h1>
-      <Face className="mt-50"/>
-      <br />
-      <button onClick={this.suffle}>Suffle</button>
-      </center>
+        <center>
+        <h1 className="header">card game</h1>
+          <h3>score:{this.state.score} <span className="ml-50">highest:{this.state.highest}</span></h3>
+          <h1>{this.state.over}</h1>
+        {this.state.over?<button onClick={this.restart}>start again</button>:<div>
+          {cards}  </div>}
+        
+        </center>
       </>
       )
   }

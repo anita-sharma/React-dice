@@ -1,6 +1,6 @@
 {
-  "homepage": "http://anita-sharma.github.io/React-dice",
-  "name": "dice",
+  "homepage": "http://anita-sharma.github.io/React-cardgame",
+  "name": "cardgame",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
